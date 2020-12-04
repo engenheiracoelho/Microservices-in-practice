@@ -35,3 +35,4 @@ Sell book service: front-end and back-end
 ## Links
 
 [- Create new project with Spring](https://start.spring.io/)
+[- Init an endpoint with Spring](https://spring.io/guides/gs/rest-service/)
