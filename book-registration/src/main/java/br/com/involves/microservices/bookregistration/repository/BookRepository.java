@@ -10,4 +10,5 @@ import java.util.Optional;
 public interface BookRepository extends CrudRepository<BookEntity,Integer> {
 
 	Optional<BookEntity> findById (Long id);
+
 }

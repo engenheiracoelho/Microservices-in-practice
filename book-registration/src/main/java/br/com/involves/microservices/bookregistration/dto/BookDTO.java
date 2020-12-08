@@ -7,6 +7,7 @@ public class BookDTO {
 	private int id;
 	private String name;
 	private BigDecimal price;
+	private Boolean isAvailable;
 
 	public int getId () {
 		return id;
@@ -32,4 +33,11 @@ public class BookDTO {
 		this.price = price;
 	}
 
+	public Boolean getAvailable () {
+		return isAvailable;
+	}
+
+	public void setAvailable (Boolean available) {
+		isAvailable = available;
+	}
 }
