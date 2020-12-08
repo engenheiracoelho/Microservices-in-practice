@@ -20,6 +20,9 @@ Sell book service: front-end and back-end
   - Sell: #book, #quantity and #TotalCost 
   - Dockerizing the project
 
+Integration test project.  
+The main purpose of this small project is test and validate the integration of the tow services.
+
 #### Technology
 
 **Front-end:** React  
