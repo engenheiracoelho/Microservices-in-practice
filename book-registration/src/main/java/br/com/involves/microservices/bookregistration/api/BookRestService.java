@@ -13,7 +13,12 @@ public class BookRestService {
 	@Autowired
 	BookRepository bookRepository;
 
-@GetMapping(value="/{id}")
+	@GetMapping
+	public Iterable<BookEntity> get(){
+		return bookRepository.findAll();
+	}
+
+    @GetMapping(value="/{id}")
 	public BookEntity getById(@PathVariable("id") Integer id){
 			return bookRepository.findById(id).get();
 	}
