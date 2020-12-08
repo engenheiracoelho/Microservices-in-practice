@@ -4,25 +4,23 @@ import br.com.involves.microservices.bookregistration.dto.BookDTO;
 import br.com.involves.microservices.bookregistration.repository.BookRepository;
 import br.com.involves.microservices.bookregistration.repositoryentities.BookEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/book")
 public class BookRestService {
 
 	@Autowired
 	BookRepository bookRepository;
 
-	@GetMapping("/book")
-	public String getById(){
-		return "Book by id";
+@GetMapping(value="/{id}")
+	public BookEntity getById(@PathVariable("id") Integer id){
+			return bookRepository.findById(id).get();
 	}
 
-	@PostMapping("/book")
+	@PostMapping
 	public BookDTO save(BookDTO bookDTO){
 		bookRepository.save(new BookEntity(bookDTO.getName(), bookDTO.getPrice()));
 		return bookDTO;
 	}
-
 }

@@ -10,7 +10,7 @@ public class BookEntity {
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	@Column
-	private int id;
+	private Integer id;
 
 	@Column
 	private String name;
@@ -18,15 +18,22 @@ public class BookEntity {
 	@Column
 	private BigDecimal price;
 
-	public BookEntity(int id, String name, BigDecimal price){
+	@Column
+	private Boolean isAvailable;
+
+	public BookEntity(){}
+
+	public BookEntity(Integer id, String name, BigDecimal price, Boolean isAvailable){
 		this.id = id;
 		this.name = name;
 		this.price = price;
+		this.isAvailable = isAvailable;
 	}
 
 	public BookEntity(String name, BigDecimal price){
 		this.name = name;
 		this.price = price;
+		this.isAvailable = true;
 	}
 
 
@@ -52,6 +59,14 @@ public class BookEntity {
 
 	public void setPrice (BigDecimal price) {
 		this.price = price;
+	}
+
+	public Boolean getAvailable () {
+		return isAvailable;
+	}
+
+	public void setAvailable (Boolean available) {
+		isAvailable = available;
 	}
 
 }
