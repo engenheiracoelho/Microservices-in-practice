@@ -23,9 +23,10 @@ public class BookRestService {
 			return bookRepository.findById(id).get();
 	}
 
-	@PostMapping
-	public BookDTO save(BookDTO bookDTO){
-		bookRepository.save(new BookEntity(bookDTO.getName(), bookDTO.getPrice()));
+	@PostMapping(consumes = "application/json", produces = "application/json")
+	public BookDTO save(@RequestBody BookDTO bookDTO){
+		BookEntity bookEntity = new BookEntity(bookDTO.getName(), bookDTO.getPrice());
+		bookRepository.save(bookEntity);
 		return bookDTO;
 	}
 }
