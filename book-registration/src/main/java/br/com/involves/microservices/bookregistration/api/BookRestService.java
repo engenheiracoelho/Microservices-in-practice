@@ -27,6 +27,7 @@ public class BookRestService {
 	public BookDTO save(@RequestBody BookDTO bookDTO){
 		BookEntity bookEntity = new BookEntity(bookDTO.getName(), bookDTO.getPrice());
 		bookRepository.save(bookEntity);
+		bookDTO.setId(bookEntity.getId());
 		return bookDTO;
 	}
 }
