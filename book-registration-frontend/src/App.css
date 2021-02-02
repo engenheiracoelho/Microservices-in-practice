@@ -24,6 +24,10 @@
   color: white;
 }
 
+.container, .container-fluid {
+  margin-top: 20px;
+}
+
 .App-link {
   color: #61dafb;
 }
