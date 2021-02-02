@@ -1,5 +1,7 @@
 package br.com.involves.microservices.bookregistration.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.math.BigDecimal;
 
 public class BookDTO {
@@ -33,6 +35,7 @@ public class BookDTO {
 		this.price = price;
 	}
 
+	@JsonProperty("isAvailable")
 	public Boolean getAvailable () {
 		return isAvailable;
 	}

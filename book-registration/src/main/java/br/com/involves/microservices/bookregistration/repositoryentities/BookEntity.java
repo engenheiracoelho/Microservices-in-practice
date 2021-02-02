@@ -31,9 +31,11 @@ public class BookEntity {
 	}
 
 	public BookEntity(String name, BigDecimal price){
-		this.name = name;
-		this.price = price;
-		this.isAvailable = true;
+		this(null, name, price, true);
+	}
+
+	public BookEntity(String name, BigDecimal price, Boolean isAvailable){
+		this(null, name, price, isAvailable);
 	}
 
 

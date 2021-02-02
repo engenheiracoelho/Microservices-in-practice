@@ -25,7 +25,7 @@ public class BookRestService {
 
 	@PostMapping(consumes = "application/json", produces = "application/json")
 	public BookDTO save(@RequestBody BookDTO bookDTO){
-		BookEntity bookEntity = new BookEntity(bookDTO.getName(), bookDTO.getPrice());
+		BookEntity bookEntity = new BookEntity(bookDTO.getName(), bookDTO.getPrice(), bookDTO.getAvailable());
 		bookRepository.save(bookEntity);
 		bookDTO.setId(bookEntity.getId());
 		return bookDTO;
