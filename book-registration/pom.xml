@@ -15,7 +15,7 @@
 	<description>Demo book-registration service from microservices-in-practic project for Involves BR</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 
 	<dependencies>
