@@ -40,7 +40,6 @@ class BookList extends Component {
         }
 
         const bookList = book.map(book => {
-            const name = `${book.name || ''} ${book.price || ''}`;
             return <tr key={book.id}>
                 <td style={{whiteSpace: 'nowrap'}}>{book.id}</td>
                 <td>{book.name}</td>
