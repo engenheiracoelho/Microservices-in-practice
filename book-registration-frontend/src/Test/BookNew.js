@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
 import AppNavbar from './AppNavbar';
+import InputBook from './InputBook'
 
 class BookNew extends Component {
 
@@ -52,7 +53,7 @@ class BookNew extends Component {
 
     render() {
 
-        return  <div> <InputBook item={this.state}/> </div>
+        return  <InputBook item={this.state}/>
     }
 }
 
